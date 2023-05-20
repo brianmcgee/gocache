@@ -12,6 +12,7 @@ mocks:
 	mockgen -source=store/ristretto/ristretto.go -destination=store/ristretto_mock.go -package=ristretto
 	mockgen -source=store/freecache/freecache.go -destination=store/freecache_mock.go -package=freecache
 	mockgen -source=store/go_cache/go_cache.go -destination=store/go_cache_mock.go -package=go_cache
+	mockgen -source=store/nats_kv/nats_kv.go -destination=store/nats_kv_mock.go -package=nats_kv
 
 test:
 	cd lib; GOGC=10 go test -v -p=4 ./...
